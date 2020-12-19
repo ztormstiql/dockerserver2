@@ -6,5 +6,16 @@ services:
     volumes:
       - ha_config:/config
       - /etc/localtime:/etc/localtime:ro
-    restart: unless-stopped
     network_mode: host
+    restart: unless-stopped
+  volume_sharer:
+    container_name: volume_sharer
+    image: gdiepen/volume_sharer
+    volumes:
+      - /var/lib/docker/volumes:/docker_volumes
+      - /var/run/docker.sock:/var/run/docker.sock
+    ports:
+      - 139:139
+      - 445:445
+    network_mode: host
+    restart: unless-stopped

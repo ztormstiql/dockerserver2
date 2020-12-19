@@ -1,10 +1,10 @@
 version: "3.9"
 services:
-	home-assistant:
-  	  container_name: home-assistant
-      image: homeassistant/home-assistant:stable
-      volumes:
-        - ha_config:/config
-        - /etc/localtime:/etc/localtime:ro
-      restart: unless-stopped
-      network_mode: host
+  home-assistant:
+    container_name: home-assistant
+    image: homeassistant/home-assistant:stable
+    volumes:
+      - ha_config:/config
+      - /etc/localtime:/etc/localtime:ro
+    restart: unless-stopped
+    network_mode: host

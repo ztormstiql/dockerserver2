@@ -10,7 +10,7 @@ services:
     restart: unless-stopped
   volume_sharer:
     container_name: volume_sharer
-    image: gdiepen/volume_sharer
+    image: gdiepen/volume-sharer
     volumes:
       - /var/lib/docker/volumes:/docker_volumes
       - /var/run/docker.sock:/var/run/docker.sock

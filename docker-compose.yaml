@@ -28,4 +28,5 @@ services:
     image: esphome/esphome
     volumes:
       - esphome_config:/config
+    network_mode: host
     restart: unless-stopped

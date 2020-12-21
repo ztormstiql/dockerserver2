@@ -23,3 +23,9 @@ services:
       - 445:445
     network_mode: host
     restart: unless-stopped
+  esphome:
+    container_name: esphome
+    image: esphome/esphome
+    volumes:
+      - esphome_config:/config
+    restart: unless-stopped

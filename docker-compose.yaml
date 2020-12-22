@@ -1,5 +1,15 @@
 version: "2.4"
 services:
+  portainer:
+    container_name: portainer
+    image: portainer/portainer-ce
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+      - portainer_data:/data
+    ports:
+      - 8000:8000
+      - 9000:9000
+    restart: always
   home-assistant:
     container_name: home-assistant
     image: homeassistant/home-assistant:stable
@@ -11,7 +21,7 @@ services:
       - /dev/ttyACM0:/dev/ttyACM0
       - /dev/ttyACM1:/dev/ttyACM1
     network_mode: host
-    restart: unless-stopped
+    restart: always
   volume_sharer:
     container_name: volume_sharer
     image: gdiepen/volume-sharer

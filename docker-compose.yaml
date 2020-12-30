@@ -39,11 +39,12 @@ services:
     image: ghcr.io/linuxserver/syncthing
     volumes:
       - syncthing_config:/config
-      - ha_config:/data1
+      - ha_config:/syncthing/ha
+      - esphome_config:/syncthing/esphome
     ports:
       - 8384:8384
       - 22000:22000
-    network_mode: host
+      - 21027:21027
     restart: always
     environment:
       - PUID=1000

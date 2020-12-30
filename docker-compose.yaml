@@ -8,6 +8,7 @@ services:
       - /etc/localtime:/etc/localtime:ro
     devices:
       - /dev/ttyUSB0:/dev/ttyUSB0
+      - /dev/ttyUSB0:/dev/ttyUSB1
       - /dev/ttyACM0:/dev/ttyACM0
       - /dev/ttyACM1:/dev/ttyACM1
     network_mode: host
@@ -29,6 +30,7 @@ services:
     volumes:
       - esphome_config:/config
     devices:
+      - /dev/ttyUSB0:/dev/ttyUSB0
       - /dev/ttyUSB0:/dev/ttyUSB1
     network_mode: host
     restart: unless-stopped

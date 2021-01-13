@@ -2,7 +2,7 @@ version: "2.4"
 services:
   home-assistant:
     container_name: home-assistant
-    image: homeassistant/home-assistant:stable
+    image: homeassistant/home-assistant:latest
     volumes:
       - ha_config:/config
       - /etc/localtime:/etc/localtime:ro

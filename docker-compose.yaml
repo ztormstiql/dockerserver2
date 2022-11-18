@@ -50,3 +50,9 @@ services:
       - PUID=1000
       - PGID=1000
       - TZ=Europe/Amsterdam
+
+volumes:
+  ha_config:
+  esphome_config:
+  syncthing_config:
+  

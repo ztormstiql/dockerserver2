@@ -1,5 +1,15 @@
 version: "2.4"
 services:
+  esphome:
+    container_name: esphome
+    image: esphome/esphome
+    volumes:
+      - esphome_config:/config
+    devices:
+      - /dev/ttyUSB0:/dev/ttyUSB0
+      - /dev/ttyUSB0:/dev/ttyUSB1
+    network_mode: host
+    restart: always
   home-assistant:
     container_name: home-assistant
     image: homeassistant/home-assistant:latest
@@ -14,46 +24,46 @@ services:
       - /dev/ttyACM1:/dev/ttyACM1
     network_mode: host
     restart: always
-  volume_sharer:
-    container_name: volume_sharer
-    image: gdiepen/volume-sharer
-    volumes:
-      - /var/lib/docker/volumes:/docker_volumes
-      - /var/run/docker.sock:/var/run/docker.sock
+  # volume_sharer:
+  #   container_name: volume_sharer
+  #   image: gdiepen/volume-sharer
+  #   volumes:
+  #     - /var/lib/docker/volumes:/docker_volumes
+  #     - /var/run/docker.sock:/var/run/docker.sock
+  #   ports:
+  #     - 139:139
+  #     - 445:445
+  #   network_mode: host
+  #   restart: always
+  homepage:
+    image: ghcr.io/benphelps/homepage:latest
+    container_name: homepage
     ports:
-      - 139:139
-      - 445:445
-    network_mode: host
-    restart: always
-  esphome:
-    container_name: esphome
-    image: esphome/esphome
+      - 3000:3000
     volumes:
-      - esphome_config:/config
-    devices:
-      - /dev/ttyUSB0:/dev/ttyUSB0
-      - /dev/ttyUSB0:/dev/ttyUSB1
-    network_mode: host
-    restart: always
-  syncthing:
-    container_name: syncthing
-    image: ghcr.io/linuxserver/syncthing
-    volumes:
-      - syncthing_config:/config
-      - ha_config:/syncthing/ha
-      - esphome_config:/syncthing/esphome
-    ports:
-      - 8384:8384
-      - 22000:22000
-      - 21027:21027
-    restart: always
-    environment:
-      - PUID=1000
-      - PGID=1000
-      - TZ=Europe/Amsterdam
+      - homepage_config:/app/config # Make sure your local config directory exists
+      - homepage_images:/app/public/images
+      - homepage_icons:/app/public/icons
+      - /var/run/docker.sock:/var/run/docker.sock # (optional) For docker integrations
+  # syncthing:
+  #   container_name: syncthing
+  #   image: ghcr.io/linuxserver/syncthing
+  #   volumes:
+  #     - syncthing_config:/config
+  #     - ha_config:/syncthing/ha
+  #     - esphome_config:/syncthing/esphome
+  #   ports:
+  #     - 8384:8384
+  #     - 22000:22000
+  #     - 21027:21027
+  #   restart: always
+  #   environment:
+  #     - PUID=1000
+  #     - PGID=1000
+  #     - TZ=Europe/Amsterdam
 
 volumes:
   ha_config:
   esphome_config:
-  syncthing_config:
+  # syncthing_config:
   

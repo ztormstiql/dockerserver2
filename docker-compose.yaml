@@ -63,7 +63,10 @@ services:
   #     - TZ=Europe/Amsterdam
 
 volumes:
-  ha_config:
   esphome_config:
+  ha_config:
+  homepage_config:
+  homepage_icons:
+  homepage_images:
   # syncthing_config:
   

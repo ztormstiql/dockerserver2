@@ -35,16 +35,6 @@ services:
   #     - 445:445
   #   network_mode: host
   #   restart: always
-  homepage:
-    image: ghcr.io/benphelps/homepage:latest
-    container_name: homepage
-    ports:
-      - 3000:3000
-    volumes:
-      - homepage_config:/app/config # Make sure your local config directory exists
-      - homepage_images:/app/public/images
-      - homepage_icons:/app/public/icons
-      - /var/run/docker.sock:/var/run/docker.sock # (optional) For docker integrations
   # syncthing:
   #   container_name: syncthing
   #   image: ghcr.io/linuxserver/syncthing
@@ -65,8 +55,5 @@ services:
 volumes:
   esphome_config:
   ha_config:
-  homepage_config:
-  homepage_icons:
-  homepage_images:
   # syncthing_config:
   

@@ -57,4 +57,3 @@ volumes:
   esphome_config:
   syncthing_config:
   
-#test

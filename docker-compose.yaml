@@ -17,8 +17,8 @@ services:
       - ha_config:/config
       - /etc/localtime:/etc/localtime:ro
     #check USB devices location before deploy: ls -l /dev/serial/by-id  
-    # devices:
-    #   - /dev/ttyUSB0:/dev/ttyUSB0
+    devices:
+      - /dev/ttyUSB1:/dev/ttyUSB1
     #   - /dev/ttyUSB0:/dev/ttyUSB1
     #   - /dev/ttyACM0:/dev/ttyACM0
     #   - /dev/ttyACM1:/dev/ttyACM1

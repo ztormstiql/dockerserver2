@@ -3,6 +3,8 @@ services:
   esphome:
     container_name: esphome
     image: esphome/esphome
+    ports:
+      - 6052:6052
     volumes:
       - esphome_config:/config
     #devices:
@@ -13,6 +15,8 @@ services:
   home-assistant:
     container_name: home-assistant
     image: homeassistant/home-assistant:latest
+    ports:
+      - 8123:8123
     volumes:
       - ha_config:/config
       - /etc/localtime:/etc/localtime:ro

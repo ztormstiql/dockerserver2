@@ -7,8 +7,8 @@ services:
       - 6052:6052
     volumes:
       - esphome_config:/config
-    #devices:
-     # - /dev/ttyUSB0:/dev/ttyUSB0
+    devices:
+      - /dev/ttyUSB0:/dev/ttyUSB0
      # - /dev/ttyUSB0:/dev/ttyUSB1
     network_mode: host
     restart: always

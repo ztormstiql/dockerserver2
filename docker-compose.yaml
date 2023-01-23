@@ -78,7 +78,7 @@ services:
 
 volumes:
   adguard_work:
-  aguard_config:
+  adguard_config:
   esphome_config:
   ha_config:
   # syncthing_config:

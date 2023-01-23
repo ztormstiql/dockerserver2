@@ -1,25 +1,5 @@
 version: "2.4"
 services:
-  adguard:
-    container_name: AdGuard
-    image: adguard/adguardhome
-    volumes:
-      - adguard_work:/opt/adguardhome/work
-      - adguard_config:/opt/adguardhome/conf
-    ports:
-      - 53:53
-      - 67:67
-      - 68:68
-      - 80:80
-      - 443:443
-      - 3005:3000
-      - 853:853
-      - 784:784
-      - 8853:8853
-      - 5443:5443
-    restart: always
-    environment:
-      - TZ=Europe/Amsterdam
   esphome:
     container_name: esphome
     image: esphome/esphome
@@ -77,8 +57,6 @@ services:
   #     - TZ=Europe/Amsterdam
 
 volumes:
-  adguard_work:
-  adguard_config:
   esphome_config:
   ha_config:
   # syncthing_config:

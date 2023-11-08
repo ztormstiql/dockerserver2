@@ -18,7 +18,7 @@ services:
     ports:
       - 8080:8080
     volumes:
-      - homer_data:/www/assets
+      - homer_data:/www
     network_mode: host
     restart: always
   home-assistant:

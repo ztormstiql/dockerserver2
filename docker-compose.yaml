@@ -12,6 +12,15 @@ services:
      # - /dev/ttyUSB0:/dev/ttyUSB1
     network_mode: host
     restart: always
+  homer:
+    container_name: homer
+    image: b4bz/homer:latest
+    ports:
+      - 8080:8080
+    volumes:
+      - homer_data:/www/assets
+    network_mode: host
+    restart: always
   home-assistant:
     container_name: home-assistant
     image: homeassistant/home-assistant:latest

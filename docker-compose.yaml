@@ -68,5 +68,6 @@ services:
 volumes:
   esphome_config:
   ha_config:
+  homer_data:
   # syncthing_config:
   

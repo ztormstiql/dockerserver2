@@ -4,6 +4,7 @@ Docker compose file for my docker running on Ubuntu-server 20.04 (running on Pro
 Following docker containers will be deployed:
 
 - Home Assistant
+- Homer
 - ESPhome
 - Volume Sharer
 - Syncthing

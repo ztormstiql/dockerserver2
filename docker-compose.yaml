@@ -16,7 +16,7 @@ services:
     container_name: homer
     image: b4bz/homer:latest
     ports:
-      - 8080:1201
+      - 1201:8080
     volumes:
       - homer_data:/www
     network_mode: host

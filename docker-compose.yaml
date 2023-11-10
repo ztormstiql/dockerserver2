@@ -21,6 +21,9 @@ services:
       - homer_data/assets:/www/assets
     network_mode: host
     restart: always
+    user: 1000:1000 
+    environment:
+      - INIT_ASSETS=1
   home-assistant:
     container_name: home-assistant
     image: homeassistant/home-assistant:latest

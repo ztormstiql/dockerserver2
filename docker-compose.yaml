@@ -38,8 +38,8 @@ services:
     #   - /dev/ttyUSB0:/dev/ttyUSB1
     #  - /dev/ttyACM0:/dev/ttyACM0
     #   - /dev/ttyACM1:/dev/ttyACM1
-    network_mode: host
-    restart: always
+    # network_mode: host
+    # restart: always
   volume_sharer:
     container_name: volume_sharer
     image: gdiepen/volume-sharer

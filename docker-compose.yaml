@@ -12,26 +12,26 @@ services:
      # - /dev/ttyUSB0:/dev/ttyUSB1
     network_mode: host
     restart: always
-  homer:
-    container_name: homer
-    image: b4bz/homer:latest
-    ports:
-      - 8080:8080
-    volumes:
-      - homer_data:/www/assets
-    network_mode: host
-    restart: always
-    user: 1000:1000 
-    environment:
-      - INIT_ASSETS=1
-  home-assistant:
-    container_name: home-assistant
-    image: homeassistant/home-assistant:latest
-    ports:
-      - 8123:8123
-    volumes:
-      - ha_config:/config
-      - /etc/localtime:/etc/localtime:ro
+  # homer:
+  #   container_name: homer
+  #   image: b4bz/homer:latest
+  #   ports:
+  #     - 8080:8080
+  #   volumes:
+  #     - homer_data:/www/assets
+  #   network_mode: host
+  #   restart: always
+  #   user: 1000:1000 
+  #   environment:
+  #     - INIT_ASSETS=1
+  # home-assistant:
+  #   container_name: home-assistant
+  #   image: homeassistant/home-assistant:latest
+  #   ports:
+  #     - 8123:8123
+  #   volumes:
+  #     - ha_config:/config
+  #     - /etc/localtime:/etc/localtime:ro
     #check USB devices location before deploy: ls -l /dev/serial/by-id  
     #devices:
      # - /dev/ttyUSB0:/dev/ttyUSB0
@@ -70,7 +70,7 @@ services:
 
 volumes:
   esphome_config:
-  ha_config:
-  homer_data:
+  # ha_config:
+  # homer_data:
   # syncthing_config:
   

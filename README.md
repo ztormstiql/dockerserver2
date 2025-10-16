@@ -1,10 +1,8 @@
-# hadockercompose
-Docker compose file for my docker running on Ubuntu-server 20.04 (running on Proxmox)
+# haszncdockercompose
+Docker compose file for non critical docker containers on a Docker LXC (running on Proxmox)
 
 Following docker containers will be deployed:
 
-- Home Assistant
-- Homer
 - ESPhome
+- Homepage
 - Volume Sharer
-- Syncthing

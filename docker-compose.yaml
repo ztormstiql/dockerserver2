@@ -40,17 +40,17 @@ services:
     #   - /dev/ttyACM1:/dev/ttyACM1
     # network_mode: host
     # restart: always
-  # volume_sharer:
-  #   container_name: volume_sharer
-  #   image: gdiepen/volume-sharer
-  #   volumes:
-  #     - /var/lib/docker/volumes:/docker_volumes
-  #     - /var/run/docker.sock:/var/run/docker.sock
-  #   ports:
-  #     - 139:139
-  #     - 445:445
-  #   network_mode: host
-  #   restart: always
+  volume_sharer:
+    container_name: volume_sharer
+    image: gdiepen/volume-sharer
+    volumes:
+      - /var/lib/docker/volumes:/docker_volumes
+      - /var/run/docker.sock:/var/run/docker.sock
+    ports:
+      - 139:139
+      - 445:445
+    network_mode: host
+    restart: always
   # syncthing:
   #   container_name: syncthing
   #   image: ghcr.io/linuxserver/syncthing

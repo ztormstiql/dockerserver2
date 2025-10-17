@@ -6,7 +6,7 @@ services:
     ports:
       - 6052:6052
     volumes:
-      - /opt/dockerserver2/esphome:/config
+      - ./esphome:/config
 #    devices:
 #      - /dev/ttyUSB0:/dev/ttyUSB0
      # - /dev/ttyUSB0:/dev/ttyUSB1

@@ -2,7 +2,7 @@ version: "3.9"
 services:
   esphome:
     container_name: esphome
-    image: esphome/esphome
+    image: ghcr.io/esphome/esphome
     ports:
       - 6052:6052
     volumes:

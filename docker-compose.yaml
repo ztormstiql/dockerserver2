@@ -6,7 +6,7 @@ services:
     ports:
       - 6052:6052
     volumes:
-      - /esphome:/config
+      - /var/lib/docker/volumes/portainer_data/_data/compose/4/esphome:/config
 #    devices:
 #      - /dev/ttyUSB0:/dev/ttyUSB0
      # - /dev/ttyUSB0:/dev/ttyUSB1

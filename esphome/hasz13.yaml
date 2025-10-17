@@ -1,0 +1,114 @@
+#hall
+substitutions:
+  name: hasz13
+  friendly_name: hasz13
+
+esphome:
+  name: ${name}
+  friendly_name: ${friendly_name}
+  min_version: 2024.6.0
+  name_add_mac_suffix: false
+  platformio_options:
+    board_build.flash_mode: dio
+  project:
+    name: esphome.web
+    version: dev
+
+esp32:
+  board: esp-wrover-kit
+  framework:
+    type: esp-idf
+
+
+# esphome:
+#   name: hasz13
+#   platform: ESP32
+#   board: esp-wrover-kit
+
+wifi:
+  ssid: "David Wu Loves You"
+  password: "oenoegoenoe"
+
+
+# Enable logging
+logger:
+
+# Enable Home Assistant API
+api:
+  encryption:
+    key: "Y2OFu3pPCRpx2BW4Ai3M5Y2ATt69sGYO9bMyKSs/780="
+
+ota:
+  platform: esphome
+  password: "9291"
+
+esp32_ble_tracker:
+  scan_parameters:
+    interval: 1100ms
+    window: 1100ms
+bluetooth_proxy:
+  active: true
+
+binary_sensor:
+  - platform: status
+    name: "HASZ13 status"
+
+one_wire:
+  - platform: gpio
+    pin: GPIO22
+
+sensor:
+  - platform: xiaomi_lywsdcgq
+    mac_address: 58:2D:34:36:B1:3C
+    temperature:
+      name: "WC temperature"
+    humidity:
+      name: "WC humidity"
+    battery_level:
+      name: "WC thermostat battery level"
+  - platform: xiaomi_lywsdcgq
+    mac_address: 58:2D:34:36:B8:98
+    temperature:
+      name: "Living room temperature"
+    humidity:
+      name: "Living room humidity"
+    battery_level:
+      name: "Living room thermostat battery Level"
+  - platform: xiaomi_lywsdcgq
+    mac_address: 58:2D:34:36:A9:BF
+    temperature:
+      name: "Bedroom Lieke temperature"
+    humidity:
+      name: "Bedroom Lieke humidity"
+    battery_level:
+      name: "Bedroom Lieke thermostat battery Level"
+  - platform: xiaomi_lywsdcgq
+    mac_address: 58:2D:34:36:AE:E3
+    temperature:
+      name: "Bedroom Rienk temperature"
+    humidity:
+      name: "Bedroom Rienk humidity"
+    battery_level:
+      name: "Bedroom Rienk thermostat battery Level"
+  # - platform: dallas_temp
+  #   address: 0xF5031097797BB928
+  #   name: "WC floor temperature"
+  # - platform: dallas_temp
+  #   address: 0x1103119779325728
+  #   name: "Hall floor temperature"
+    
+switch:
+  - platform: restart
+    name: "HASZ13 Restart"
+    id: restart_switch
+  - platform: gpio
+    pin: GPIO16
+    name: "WC heating valve"
+    inverted: yes
+    command_topic: hasz13/switch/wc_heating_valve
+
+mqtt:
+  broker: 192.168.178.238
+  username: ztorm
+  password: lekkerding
+  discovery: false

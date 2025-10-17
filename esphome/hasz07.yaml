@@ -1,0 +1,35 @@
+esphome:
+  name: hasz07
+  friendly_name: hasz07
+
+esp8266:
+  board: d1_mini
+
+# Enable logging
+logger:
+
+# Enable Home Assistant API
+api:
+  encryption:
+    key: "4Q6r9bewhtNMDm5OkMltO2ScZh4J/QHO/ijyuK2rRJk="
+
+ota:
+  platform: esphome
+  password: "aeffc548a37ca7d2dbd739cbf350c05e"
+
+wifi:
+  ssid: !secret wifi_ssid
+  password: !secret wifi_password
+
+  # Enable fallback hotspot (captive portal) in case wifi connection fails
+  ap:
+    ssid: "Hasz07 Fallback Hotspot"
+    password: "MzCLcw4nKTRd"
+
+captive_portal:
+
+
+switch:
+  - platform: gpio
+    pin: D1
+    name: "Attic Boiler"

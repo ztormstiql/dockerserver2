@@ -1,0 +1,77 @@
+substitutions:
+  name: hasz12
+  friendly_name: hasz12
+
+esphome:
+  name: ${name}
+  friendly_name: ${friendly_name}
+  min_version: 2024.6.0
+  name_add_mac_suffix: false
+  platformio_options:
+    board_build.flash_mode: dio
+  project:
+    name: esphome.web
+    version: dev
+
+esp32:
+  board: esp-wrover-kit
+  framework:
+    type: esp-idf
+
+
+# # Office
+# esphome:
+#   name: hasz12
+#   platform: ESP32
+#   board: esp-wrover-kit
+
+wifi:
+  ssid: "David Wu Loves You"
+  password: "oenoegoenoe"
+
+# Enable logging
+logger:
+
+# Enable Home Assistant API
+api:
+  encryption:
+    key: "07FKX0S4PLlpeumwrwl0mhM3vlivCaDKYn6DNR6B8aU="
+
+ota:
+  platform: esphome
+  password: "9291"
+
+esp32_ble_tracker:
+  scan_parameters:
+    interval: 320ms
+    window: 300ms
+    active: true
+
+bluetooth_proxy:
+  active: true
+
+binary_sensor:
+  - platform: status
+    name: "HASZ12 status"
+
+sensor:
+  - platform: xiaomi_lywsdcgq
+    mac_address: 58:2D:34:31:76:8F
+    temperature:
+      name: "Office Temperature"
+    humidity:
+      name: "Office Humidity"
+    battery_level:
+      name: "Office Thermostat Battery Level"
+
+switch:
+  - platform: restart
+    name: " HASZ12 restart"
+    id: restart_switch
+
+mqtt:
+  broker: 192.168.178.238
+  username: ztorm
+  password: lekkerding
+  discovery: false
+  

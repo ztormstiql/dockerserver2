@@ -1,0 +1,65 @@
+esphome:
+  name: hasz05
+
+esp32:
+  board: esp32dev
+  framework:
+    type: arduino
+
+# Enable logging
+logger:
+
+# Enable Home Assistant API
+api:
+  encryption:
+    key: "UJz2UlwlySG9fGin7oFtO2MUf1866Ess27KEZ9teiC8="
+
+ota:
+  platform: esphome
+  password: "1126a23f8a3cfa57d930f287b98d2a90"
+
+wifi:
+  ssid: !secret wifi_ssid
+  password: !secret wifi_password
+
+  # # Enable fallback hotspot (captive portal) in case wifi connection fails
+  # ap:
+  #   ssid: "Hasz05 Fallback Hotspot"
+  #   password: "U1vWsVrfdbdr"
+
+captive_portal:
+
+binary_sensor:
+  # - platform: gpio
+  #   pin: 
+  #     number: 22
+  #     inverted: false
+  #     mode:
+  #       input: true
+  #       pullup: true
+  #   # filters:
+  #   #   - delayed_off: 10 ms
+  #   name: "Bijkeuken deur"
+  #   device_class: door    
+  - platform: status
+    name: "HASZ05 status"
+
+esp32_ble_tracker:
+  scan_parameters:
+    interval: 320ms
+    window: 300ms
+    active: true
+
+bluetooth_proxy:
+  active: true
+
+mqtt:
+  broker: 192.168.178.238
+  username: ztorm
+  password: lekkerding
+  discovery: false
+
+switch:
+  - platform: restart
+    name: "HASZ05 Restart"
+    id: restart_switch

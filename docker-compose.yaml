@@ -40,6 +40,17 @@ services:
     #   - /dev/ttyACM1:/dev/ttyACM1
     # network_mode: host
     # restart: always
+  komodo-agent:
+    image: mbecker20/komodo-agent:latest
+    container_name: komodo-agent
+    restart: unless-stopped
+    ports:
+      - "9123:9123"
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock:ro
+    environment:
+      # Optioneel: geef een naam of beschrijving van de host door
+      - KOMODO_AGENT_NAME=dockerserver2
   volume_sharer:
     container_name: volume_sharer
     image: gdiepen/volume-sharer

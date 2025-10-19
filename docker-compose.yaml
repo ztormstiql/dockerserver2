@@ -45,7 +45,7 @@ services:
     container_name: komodo-agent
     restart: unless-stopped
     ports:
-      - "9123:9123"
+      - "8120:8120"
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock:ro
     environment:

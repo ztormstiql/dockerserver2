@@ -41,7 +41,7 @@ services:
     # network_mode: host
     # restart: always
   komodo-agent:
-    image: mbecker20/komodo-agent:latest
+    image: ghcr.io/moghtech/komodo-periphery:latest
     container_name: komodo-agent
     restart: unless-stopped
     ports:

@@ -51,17 +51,17 @@ services:
     environment:
       # Optioneel: geef een naam of beschrijving van de host door
       - KOMODO_AGENT_NAME=dockerserver2
-  volume_sharer:
-    container_name: volume_sharer
-    image: gdiepen/volume-sharer
-    volumes:
-      - /var/lib/docker/volumes:/docker_volumes
-      - /var/run/docker.sock:/var/run/docker.sock
-    ports:
-      - 139:139
-      - 445:445
-    network_mode: host
-    restart: always
+  # volume_sharer:
+  #   container_name: volume_sharer
+  #   image: gdiepen/volume-sharer
+  #   volumes:
+  #     - /var/lib/docker/volumes:/docker_volumes
+  #     - /var/run/docker.sock:/var/run/docker.sock
+  #   ports:
+  #     - 139:139
+  #     - 445:445
+  #   network_mode: host
+  #   restart: always
   # syncthing:
   #   container_name: syncthing
   #   image: ghcr.io/linuxserver/syncthing

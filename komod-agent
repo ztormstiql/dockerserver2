@@ -1,0 +1,7 @@
+# after start of docker server: add komodo agent to connect with komodo
+
+docker run -d \
+  --name komodo-agent \
+  -v /var/run/docker.sock:/var/run/docker.sock \
+  -p 8120:8120 \
+  mbecker20/komodo-agent

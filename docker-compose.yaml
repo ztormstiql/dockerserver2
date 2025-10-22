@@ -6,7 +6,7 @@ services:
     ports:
       - 6052:6052
     volumes:
-      - /DATA/AppData/esphome:/config
+      - /opt/esphome:/config
 #    devices:
 #      - /dev/ttyUSB0:/dev/ttyUSB0
      # - /dev/ttyUSB0:/dev/ttyUSB1

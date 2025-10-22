@@ -1,7 +1,7 @@
 # after start of docker server: add komodo agent to connect with komodo
 
 
-#### CHECK DE ENV VAN DE DOCKER COMPOSE! DEZE MOETEN WORDEN TOEGEVOEGD! ######
+#### CHECK DE ENV EN VOLUMES VAN DE DOCKER COMPOSE! DEZE MOETEN WORDEN TOEGEVOEGD! ######
 
 docker run -d \
   --name komodo-agent \

@@ -4,4 +4,4 @@ docker run -d \
   --name komodo-agent \
   -v /var/run/docker.sock:/var/run/docker.sock \
   -p 8120:8120 \
-  mbecker20/komodo-agent
+  ghcr.io/moghtech/komodo-periphery:latest

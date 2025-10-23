@@ -12,13 +12,13 @@ services:
      # - /dev/ttyUSB0:/dev/ttyUSB1
     # network_mode: host
     restart: always
-    labels:
-      - "traefik.enable=true"
-      - "traefik.http.routers.esphome.rule=Host(`esphome.local`)"
-      - "traefik.http.services.esphome.loadbalancer.server.port=6052"
+    # labels:
+    #   - "traefik.enable=true"
+    #   - "traefik.http.routers.esphome.rule=Host(`esphome.local`)"
+    #   - "traefik.http.services.esphome.loadbalancer.server.port=6052"
 
-    networks:
-      - proxy
+    # networks:
+    #   - proxy
 
 
   # homer:

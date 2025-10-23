@@ -12,14 +12,11 @@ services:
      # - /dev/ttyUSB0:/dev/ttyUSB1
     # network_mode: host
     restart: always
-    # labels:
-    #   - "traefik.enable=true"
-    #   - "traefik.http.routers.esphome.rule=Host(`esphome.local`)"
-    #   - "traefik.http.services.esphome.loadbalancer.server.port=6052"
-    command:
-      - "--api.insecure=true"
-      - "--providers.docker=true"
-      - "--entrypoints.web.address=:80"
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.esphome.rule=Host(`esphome.local`)"
+      - "traefik.http.services.esphome.loadbalancer.server.port=6052"
+
     networks:
       - proxy
 
@@ -87,6 +84,7 @@ services:
       - "--providers.docker=true"
       - "--providers.docker.exposedbydefault=false"
       - "--entrypoints.web.address=:80"
+      - "--api.insecure=true"
     ports:
       - 80:80       # HTTP
       # - "443:443"   # HTTPS (optioneel, als je later TLS toevoegt)

@@ -10,7 +10,7 @@ services:
 #    devices:
 #      - /dev/ttyUSB0:/dev/ttyUSB0
      # - /dev/ttyUSB0:/dev/ttyUSB1
-    # network_mode: host
+    network_mode: host
     restart: always
     # labels:
     #   - "traefik.enable=true"

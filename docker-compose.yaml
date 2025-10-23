@@ -14,7 +14,7 @@ services:
     restart: always
     labels:
       - "traefik.enable=true"
-      - "traefik.http.routers.esphome.rule=Host(`esphome.lan`)"
+      - "traefik.http.routers.esphome.rule=Host(`esphome.local`)"
       - "traefik.http.services.esphome.loadbalancer.server.port=6052"
 
     networks:

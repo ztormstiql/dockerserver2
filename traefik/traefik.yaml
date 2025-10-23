@@ -2,4 +2,10 @@ log:
   level: INFO
 
 api:
-  dashboard: true
+  # dashboard: true
+  insecure: true
+entryPoints:
+  web:
+    address: ":80"
+providers:
+  docker: {}

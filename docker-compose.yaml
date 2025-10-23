@@ -40,6 +40,18 @@ services:
     #   - /dev/ttyACM1:/dev/ttyACM1
     # network_mode: host
     # restart: always
+  homepage:
+    image: ghcr.io/gethomepage/homepage:latest
+    container_name: homepage
+    ports:
+      - 1201:3000
+    volumes:
+      - ./homepage/config:/app/config # Make sure your local config directory exists
+      - .homepage/images:/app/public/images
+      - ./homepage/icons:/app/public/icons
+      - /var/run/docker.sock:/var/run/docker.sock # (optional) For docker integrations
+    environment:
+      - TZ=Europe/Amsterdam
   komodo-agent:
     image: ghcr.io/moghtech/komodo-periphery:latest
     container_name: komodo-agent

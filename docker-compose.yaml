@@ -12,6 +12,14 @@ services:
      # - /dev/ttyUSB0:/dev/ttyUSB1
     network_mode: host
     restart: always
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.esphome.rule=Host(`esphome.local`)"
+      - "traefik.http.services.esphome.loadbalancer.server.port=6052"
+    networks:
+      - proxy
+
+
   # homer:
   #   container_name: homer
   #   image: b4bz/homer:latest
@@ -67,6 +75,22 @@ services:
       # Optioneel: geef een naam of beschrijving van de host door
       KOMODO_AGENT_NAME: dockerserver2
       PERIPHERY_ROOT_DIRECTORY: ${PERIPHERY_ROOT_DIRECTORY:-/etc/komodo}
+  traefik:
+    image: traefik:v3.1
+    container_name: traefik
+    restart: always
+    command:
+      - "--providers.docker=true"
+      - "--providers.docker.exposedbydefault=false"
+      - "--entrypoints.web.address=:80"
+    ports:
+      - "80:80"       # HTTP
+      # - "443:443"   # HTTPS (optioneel, als je later TLS toevoegt)
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock:ro
+      - ./traefik/traefik.yml:/traefik.yml:ro
+    networks:
+      - proxy
   # volume_sharer:
   #   container_name: volume_sharer
   #   image: gdiepen/volume-sharer
@@ -100,4 +124,6 @@ services:
   # ha_config:
   # homer_data:
   # syncthing_config:
-  
+networks:
+  proxy:
+    external: false

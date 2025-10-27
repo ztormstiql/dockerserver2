@@ -8,7 +8,7 @@
           icon: node-red.png
     - DSMR:
         - href: http://192.168.178.248:7777
-          icon: https://github.com/dsmrreader/dsmr-reader/blob/v5/dsmr_frontend/static/dsmr_frontend/img/favicons/favicon-32x32.png
+          icon: https://github.com/dsmrreader/dsmr-reader/blob/v5/dsmr_frontend/static/dsmr_frontend/img/favicons/favicon-32x32.png?raw=true
     - Zigbee:
         - href: http://192.168.178.91
           icon: phoscon-light.png

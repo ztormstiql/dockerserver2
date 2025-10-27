@@ -15,8 +15,8 @@
           url: http://192.168.178.11:9120
           key: K-WHCPTC4YBkkL54uZE5D6v3Bf0x5lkPTHbQxTVziK
           secret: S-R3qNO12ehOqbbGjsqYEtTqImrmiDhgwmIg1FRvco
-          # showSummary: true # optional, default: false
-          showStacks: true # optional, default: false
+          showSummary: true # optional, default: false
+          # showStacks: true # optional, default: false
 
     - Cup:
         href: http://192.168.178.127:8008

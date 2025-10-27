@@ -2,5 +2,4 @@
     "servers": {
         "Docker server 1": "http://192.168.178.101:8008"
     }
-    // Other options
 }

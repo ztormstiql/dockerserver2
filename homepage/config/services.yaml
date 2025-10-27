@@ -4,7 +4,7 @@
         description: Homepage is super
         widget:
           type: adguard
-          url: http://192.168.178.234
+          url: http://192.168.178.234:1201
           username: ztorm
           password: Superbink1982!
 

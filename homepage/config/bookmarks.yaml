@@ -1,5 +1,8 @@
 
 - HomeLab Production:
+    - Home Assistant:
+        - href: http://192.168.178.238:8123
+          icon: home-assistant.png
     - NodeRed HA:
         - href: http://192.168.178.238:1885
           icon: node-red.png

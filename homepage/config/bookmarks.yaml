@@ -1,5 +1,5 @@
 
 - HomeLab:
     - NodeRed HA:
-        - href: http://192.168.178.238:1805
+        - href: http://192.168.178.238:1885
           icon: node-red.png

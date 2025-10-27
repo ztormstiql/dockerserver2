@@ -2,7 +2,7 @@
     - AdGuard:
         href: http://192.168.178.234:1201
         icon: adguard-home.png
-        background: #d5a6bd
+        background: "#d5a6bd"
         widget:
           type: adguard
           url: http://192.168.178.234:1201

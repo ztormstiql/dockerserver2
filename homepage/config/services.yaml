@@ -1,7 +1,7 @@
 - My First Group:
-    - Mijn eerste service:
-        href: http://localhost/
-        description: Homepage is super
+    - AdGuard:
+        href: http://192.168.178.234:120
+        icon: adguard-home.png
         widget:
           type: adguard
           url: http://192.168.178.234:1201

@@ -2,4 +2,4 @@ background:
   image: /images/background.jpg
   opacity: 50
 
-cardBlur: xs
+cardBlur: lg

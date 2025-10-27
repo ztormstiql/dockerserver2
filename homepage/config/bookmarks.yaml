@@ -16,6 +16,9 @@
           
 
 - HomeLab Testing:
+    - Home Assistant:
+        - href: http://192.168.178.78:8123
+          icon: home-assistant.png
     - NodeRed:
         - href: http://192.168.178.160:1880
           icon: node-red.png

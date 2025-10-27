@@ -6,6 +6,9 @@
     - NodeRed HA:
         - href: http://192.168.178.238:1885
           icon: node-red.png
+    - DSMR:
+        - href: http://192.168.178.248:7777
+          icon: http://github.com/dsmr_frontend/static/dsmr_frontend/img/favicons/favicon-32x32.png
     - Zigbee:
         - href: http://192.168.178.91
           icon: phoscon-light.png

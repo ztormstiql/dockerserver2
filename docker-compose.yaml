@@ -3,7 +3,7 @@ services:
   cup:
     image: ghcr.io/sergi0g/cup:latest
     container_name: cup # Optional
-    command: serve
+    command: -c /config/cup.json serve
     ports:
       - 8008:8000
     volumes:

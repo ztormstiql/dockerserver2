@@ -7,4 +7,14 @@
           url: http://192.168.178.234:1201
           username: ztorm
           password: Superbink1982!
+    - Komodo:
+        href: http://192.1678.178.11:9120
+        icon: komodo.png
+        widget:
+        type: komodo
+          url: http://192.1678.178.11:9120
+          key: K-9JQUoxAuqQdDigYb6ZuC99OX4wnyFljf6pIUwoKk
+          secret: S-bOCXnTHCfvANOZsAYU7Z423pfKR5DszrPSTTQeZO
+          showSummary: true # optional, default: false
+          showStacks: true # optional, default: false
 

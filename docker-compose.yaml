@@ -104,7 +104,7 @@ services:
       KOMODO_AGENT_NAME: dockerserver2
       PERIPHERY_ROOT_DIRECTORY: ${PERIPHERY_ROOT_DIRECTORY:-/etc/komodo}
   traefik:
-    image: traefik:v3.1
+    image: traefik:latest
     container_name: traefik
     restart: always
     command:

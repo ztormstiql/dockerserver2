@@ -28,3 +28,9 @@
     - NodeRed:
         - href: http://192.168.178.160:1880
           icon: node-red.png
+
+
+- Services:
+    - Nextcloud:
+        - href: http://192.168.178.89
+          icon: nextcloud.png

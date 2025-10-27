@@ -10,3 +10,6 @@ layout:
   Info:
     style: row
     columns: 4
+  Servers:
+    style: row
+    columns: 4

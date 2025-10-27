@@ -5,3 +5,8 @@ background:
 cardBlur: xl
 
 bookmarksStyle: icons
+
+layout:
+  Info:
+    style: row
+    columns: 4

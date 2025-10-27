@@ -18,3 +18,13 @@
           showSummary: true # optional, default: false
           showStacks: true # optional, default: false
 
+- Servers:
+    - Proxmox:
+        href: https://192.168.178.50:8006
+        icon: proxmox.png 
+    - Unraid:
+        href: https://192.168.178.238
+        icon: unraid.png
+    - CasaOS:
+        href: https://192.168.178.234
+        icon: unraid.png

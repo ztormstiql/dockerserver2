@@ -1,5 +1,13 @@
 
-- HomeLab:
+- HomeLab Production:
     - NodeRed HA:
         - href: http://192.168.178.238:1885
+          icon: node-red.png
+    - Z-wave JS:
+        - href: http://192.168.178.101:8091
+          icon: z-wave-js-ui.png
+
+- HomeLab Testing:
+    - NodeRed:
+        - href: http://192.168.178.160:1880
           icon: node-red.png

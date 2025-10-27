@@ -1,4 +1,4 @@
-- My First Group:
+- Info:
     - AdGuard:
         href: http://192.168.178.234:1201
         icon: adguard-home.png
@@ -8,12 +8,3 @@
           username: ztorm
           password: Superbink1982!
 
-- My Second Group:
-    - My Second Service:
-        href: http://localhost/
-        description: Homepage is the best
-
-- My Third Group:
-    - My Third Service:
-        href: http://localhost/
-        description: Homepage is top

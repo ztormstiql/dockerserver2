@@ -1,6 +1,6 @@
 background:
   image: /images/background.jpeg
-  opacity: 50
+  # opacity: 50
 
 cardBlur: xl
 

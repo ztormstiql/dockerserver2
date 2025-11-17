@@ -11,6 +11,9 @@ layout:
     style: row
     columns: 4
   HomeLab Production: 
+    iconsOnly: true
+  HomeLab Testing: 
+    iconsOnly: true
   Servers:
     style: row
     columns: 4

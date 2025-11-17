@@ -13,3 +13,6 @@ layout:
   Servers:
     style: row
     columns: 4
+  Docker:
+    style: row
+    columns: 4

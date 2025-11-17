@@ -10,6 +10,8 @@ services:
       - /var/run/docker.sock:/var/run/docker.sock
       - ./cup:/config
     restart: always
+    environment:
+      CUP_REFRESH_INTERVAL: "0 * * * *"
     labels:
       homepage.group: Network
       homepage.name: Cup

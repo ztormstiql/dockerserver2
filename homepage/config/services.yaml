@@ -45,7 +45,7 @@
         href: http://192.168.178.238
         icon: unraid.png
     - CasaOS:
-        href: https://192.168.178.234
+        href: http://192.168.178.234
         icon: casaos.png
 - Docker:
     - Server 1:

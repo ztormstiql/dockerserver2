@@ -10,8 +10,7 @@ layout:
   Info:
     style: row
     columns: 4
-  HomeLab Production:
-    
+  HomeLab Production: 
   Servers:
     style: row
     columns: 4

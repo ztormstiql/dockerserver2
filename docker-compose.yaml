@@ -92,6 +92,7 @@ services:
     environment:
       - TZ=Europe/Amsterdam
       - HOMEPAGE_ALLOWED_HOSTS=192.168.178.127:1201,localhost,127.0.0.1
+    restart: always
   komodo-agent:
     image: ghcr.io/moghtech/komodo-periphery:latest
     container_name: komodo-agent

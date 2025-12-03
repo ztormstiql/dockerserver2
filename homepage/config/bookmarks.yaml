@@ -30,7 +30,7 @@
           icon: node-red.png
     - N8N:
         - href: http://192.168.178.165
-          icon: N8N.png
+          icon: n8n.png
 
 
 - Services:

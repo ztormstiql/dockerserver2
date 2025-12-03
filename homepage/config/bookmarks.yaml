@@ -52,3 +52,6 @@
     - NZBget:
         - href: http://192.168.178.238:6789
           icon: nzbget.png
+    - Ombi:
+        - href: http://192.168.178.238:3579
+          icon: Ombi

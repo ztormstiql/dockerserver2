@@ -28,6 +28,9 @@
     - NodeRed:
         - href: http://192.168.178.160:1880
           icon: node-red.png
+    - N8N:
+        - href: http://192.168.178.165
+          icon: N8N.png
 
 
 - Services:

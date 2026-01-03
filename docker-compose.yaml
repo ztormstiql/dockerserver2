@@ -164,6 +164,7 @@ services:
       - /etc/localtime:/etc/localtime:ro
       - /var/lib/zerobyte:/var/lib/zerobyte
       - /data:/data
+      - ~/.config/rclone:/root/.config/rclone
 # volumes:
 #   esphome_config:
   # ha_config:

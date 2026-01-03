@@ -152,7 +152,18 @@ services:
   #     - PUID=1000
   #     - PGID=1000
   #     - TZ=Europe/Amsterdam
-
+  zerobyte:
+    image: ghcr.io/nicotsx/zerobyte:v0.19
+    container_name: zerobyte
+    restart: always
+    ports:
+      - 4096:4096
+    environment:
+      - TZ=Europe/Amsterdam  # Set your timezone here
+    volumes:
+      - /etc/localtime:/etc/localtime:ro
+      - /var/lib/zerobyte:/var/lib/zerobyte
+      - /data:/data
 # volumes:
 #   esphome_config:
   # ha_config:

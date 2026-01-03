@@ -165,6 +165,7 @@ services:
       - /var/lib/zerobyte:/var/lib/zerobyte
       - /data:/data
       - ~/.config/rclone:/root/.config/rclone
+      - /root/.ssh/hetzner_sb:/root/.ssh/hetzner_sb:ro
 # volumes:
 #   esphome_config:
   # ha_config:

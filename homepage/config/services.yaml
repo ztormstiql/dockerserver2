@@ -45,7 +45,7 @@
           site: Unifi
           username: ztormstiql@yahoo.com 
           password: Superbink1982!
-         # key: unifiapikey
+          key: Y3ANOQZSkQSaYUKGUyQfPhRoiOU2g1M_
 
 - Servers:
     - Proxmox:

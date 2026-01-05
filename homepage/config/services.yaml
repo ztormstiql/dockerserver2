@@ -43,8 +43,8 @@
           type: unifi
           url: https:/192.168.178.1
           site: Unifi
-          username: ztormstiql@yahoo.com 
-          password: Superbink1982!
+          # username: ztormstiql@yahoo.com 
+          # password: Superbink1982!
           key: Y3ANOQZSkQSaYUKGUyQfPhRoiOU2g1M_
 
 - Servers:

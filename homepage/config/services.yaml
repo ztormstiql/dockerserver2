@@ -41,7 +41,7 @@
         icon: unifi.png
         widget:
           type: unifi
-          url: https://unifi.host.or.ip:port
+          url: https:/192.168.178.1
           site: Unifi
           username: ztormstiql@yahoo.com 
           password: Superbink1982!

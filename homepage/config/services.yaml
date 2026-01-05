@@ -36,6 +36,16 @@
             - field: metrics.updates_available
               label: Available updates
               format: number
+    - Unifi:
+        href: https://192.168.178.1
+        icon: unifi.png
+        widget:
+          type: unifi
+          url: https://unifi.host.or.ip:port
+          site: Unifi
+          username: ztormstiql@yahoo.com 
+          password: Superbink1982!
+         # key: unifiapikey
 
 - Servers:
     - Proxmox:

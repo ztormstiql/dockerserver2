@@ -52,6 +52,9 @@
     - Prowlarr:
         - href: http://192.168.178.238:9696
           icon: prowlarr.png
+    - Bazarr:
+        - href: http://192.168.178.238:6767
+          icon: bazarr.png
     - NZBget:
         - href: http://192.168.178.238:6789
           icon: nzbget.png

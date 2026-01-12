@@ -61,4 +61,7 @@
     - Server 2:
         href: https://192.168.178.127:9443
         icon: docker-moby.png
+    - Server 3:
+        href: https://192.168.178.29:9443
+        icon: docker-moby.png
 

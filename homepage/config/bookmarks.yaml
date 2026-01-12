@@ -35,7 +35,7 @@
 
 - Services:
     - Nextcloud:
-        - href: http://192.168.178.89
+        - href: https://nextcloud.ztormstiql.nl
           icon: nextcloud.png
     - Plex:
         - href: http://192.168.178.238:32400

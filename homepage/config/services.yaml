@@ -7,7 +7,7 @@
           url: http://192.168.178.234:1201
           username: ztorm
           password: Superbink1982!
-     - AdGuard 2:
+    - AdGuard 2:
         href: http://192.168.178.101:80
         icon: adguard-home.png
         widget:

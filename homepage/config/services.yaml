@@ -13,8 +13,8 @@
         widget:
           type: adguard
           url: http://192.168.178.101:80
-          username: admin
-          password: superbink1982
+          username: ztorm
+          password: Superbink1982!
     - Komodo:
         href: http://192.168.178.11:9120
         icon: komodo.png

@@ -1,5 +1,5 @@
 - Info:
-    - AdGuard:
+    - AdGuard 1:
         href: http://192.168.178.234:1201
         icon: adguard-home.png
         widget:
@@ -7,6 +7,14 @@
           url: http://192.168.178.234:1201
           username: ztorm
           password: Superbink1982!
+     - AdGuard 2:
+        href: http://192.168.178.101:80
+        icon: adguard-home.png
+        widget:
+          type: adguard
+          url: http://192.168.178.101:80
+          username: admin
+          password: superbink1982
     - Komodo:
         href: http://192.168.178.11:9120
         icon: komodo.png

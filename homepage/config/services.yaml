@@ -52,6 +52,15 @@
           url: https:/192.168.178.1
           key: Y3ANOQZSkQSaYUKGUyQfPhRoiOU2g1M_
 
+    - NPM 1:
+        href: http://192.168.178.29:81
+        icon: nginx.png
+        widget:
+          type: npm
+          url: http://192.168.178.29:81
+          username: ztormstiql@yahoo.com
+          password: Superbink1982!
+
 - Servers:
     - Proxmox:
         href: https://192.168.178.50:8006

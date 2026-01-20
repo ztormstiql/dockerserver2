@@ -85,7 +85,7 @@ services:
       - /var/run/docker.sock:/var/run/docker.sock # (optional) For docker integrations
     environment:
       - TZ=Europe/Amsterdam
-      - HOMEPAGE_ALLOWED_HOSTS=192.168.178.127:1201,localhost,127.0.0.1, 192.168.178.168
+      - HOMEPAGE_ALLOWED_HOSTS=192.168.178.127:1201,localhost,127.0.0.1,192.168.178.168
     restart: always
   komodo-agent:
     image: ghcr.io/moghtech/komodo-periphery:latest

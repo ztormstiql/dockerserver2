@@ -8,11 +8,11 @@
           username: ztorm
           password: Superbink1982!
     - AdGuard 2:
-        href: http://192.168.178.101:80
+        href: http://192.168.178.101:1201
         icon: adguard-home.png
         widget:
           type: adguard
-          url: http://192.168.178.101:80
+          url: http://192.168.178.101:1201
           username: ztorm
           password: Superbink1982!
     - Komodo:

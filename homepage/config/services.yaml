@@ -61,11 +61,11 @@
           username: ztormstiql@yahoo.com
           password: Superbink1982!
     - NPM (.app):
-        href: http://192.168.178.168:81
+        href: https://192.168.178.168:81
         icon: nginx-proxy-manager.png
         widget:
           type: npm
-          url: http://192.168.178.168:81
+          url: https://192.168.178.168:81
           username: ztormstiql@yahoo.com
           password: Superbink1982!
 

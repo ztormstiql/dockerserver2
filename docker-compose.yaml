@@ -42,13 +42,7 @@ services:
      # - /dev/ttyUSB0:/dev/ttyUSB1
     network_mode: host
     restart: always
-    # labels:
-    #   - "traefik.enable=true"
-    #   - "traefik.http.routers.esphome.rule=Host(`esphome.local`)"
-    #   - "traefik.http.services.esphome.loadbalancer.server.port=6052"
 
-    # networks:
-    #   - proxy
 
 
   # homer:
@@ -107,24 +101,20 @@ services:
       # Optioneel: geef een naam of beschrijving van de host door
       KOMODO_AGENT_NAME: dockerserver2
       PERIPHERY_ROOT_DIRECTORY: ${PERIPHERY_ROOT_DIRECTORY:-/etc/komodo}
-  traefik:
-    image: traefik:latest
-    container_name: traefik
-    restart: always
-    command:
-      - "--providers.docker=true"
-      - "--providers.docker.exposedbydefault=false"
-      - "--entrypoints.web.address=:80"
-      - "--api.insecure=true"
-    ports:
-      - 80:80       # HTTP
-      # - "443:443"   # HTTPS (optioneel, als je later TLS toevoegt)
-      - 8080:8080 #dashboard
+  nginx-proxy-manager:
+    image: 'docker.io/jc21/nginx-proxy-manager:latest'
+    restart: unless-stopped
+    container_name: nginx-proxy-manager
+    network_mode: host
+    # ports:
+    #   - 80:80
+    #   - 443:443
+    #   - 81:3000
+    environment: # Uncomment this if IPv6 is not enabled on your host
+      - DISABLE_IPV6=true # Uncomment this if IPv6 is not enabled on your host
     volumes:
-      - /var/run/docker.sock:/var/run/docker.sock:ro
-      - ./traefik/traefik.yaml:/traefik.yml:ro
-    networks:
-      - proxy
+      - ./npm/data:/data
+      - ./npm/letsencrypt:/etc/letsencrypt
   # volume_sharer:
   #   container_name: volume_sharer
   #   image: gdiepen/volume-sharer
@@ -171,6 +161,3 @@ services:
   # ha_config:
   # homer_data:
   # syncthing_config:
-networks:
-  proxy:
-    external: false

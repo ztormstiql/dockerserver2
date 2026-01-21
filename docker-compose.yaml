@@ -108,9 +108,15 @@ services:
       - "9090:9090"
     volumes:
       - "./linkding/data:/etc/linkding/data"
-    env_file:
-      - "./linkding/data/.env"
     restart: unless-stopped
+    environment:
+      - LINKDING_DB_TYPE=sqlite   # makkelijkste optie, database in container
+      # - LINKDING_DB_TYPE=mysql  # voor MySQL/Postgres kun je dit uncommenten en instellen
+      # - LINKDING_DB_HOST=db
+      # - LINKDING_DB_NAME=linkding
+      # - LINKDING_DB_USER=linkding
+      # - LINKDING_DB_PASS=strongpassword
+
   # volume_sharer:
   #   container_name: volume_sharer
   #   image: gdiepen/volume-sharer

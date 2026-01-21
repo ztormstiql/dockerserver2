@@ -101,7 +101,16 @@ services:
       # Optioneel: geef een naam of beschrijving van de host door
       KOMODO_AGENT_NAME: dockerserver2
       PERIPHERY_ROOT_DIRECTORY: ${PERIPHERY_ROOT_DIRECTORY:-/etc/komodo}
-
+  linkding:
+    container_name: linkding
+    image: sissbruecker/linkding:latest
+    ports:
+      - "9090:9090"
+    volumes:
+      - "./linkding/data:/etc/linkding/data"
+    env_file:
+      - "./linkding/data/.env"
+    restart: unless-stopped
   # volume_sharer:
   #   container_name: volume_sharer
   #   image: gdiepen/volume-sharer

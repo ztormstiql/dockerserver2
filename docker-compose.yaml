@@ -112,7 +112,7 @@ services:
     environment:
       - LINKDING_DB_TYPE=sqlite   # makkelijkste optie, database in container
       - LD_SUPERUSER_NAME=ztorm
-      -LD_SUPERUSER_PASSWORD=lekkerding
+      - LD_SUPERUSER_PASSWORD=lekkerding
 
       # - LINKDING_DB_TYPE=mysql  # voor MySQL/Postgres kun je dit uncommenten en instellen
       # - LINKDING_DB_HOST=db

@@ -37,6 +37,9 @@
     - Nextcloud:
         - href: https://nextcloud.ztormstiql.nl
           icon: nextcloud.png
+    - Immich:
+        - href: https://fotos.hasz.app
+          icon: immich.png
     - Plex:
         - href: http://192.168.178.238:32400
           icon: plex.png

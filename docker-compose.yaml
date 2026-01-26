@@ -21,7 +21,7 @@ services:
 
       # The below database details are purposefully aligned with those
       # configuted for the "mariadb" service below:
-      - DB_HOST=http://192.168.178.238
+      - DB_HOST=192.168.178.238
       - DB_PORT=3306
       - DB_DATABASE=bookstack
       - DB_USERNAME=bookstack

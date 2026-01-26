@@ -6,6 +6,8 @@ services:
     # You'll change this when wanting to update the version of BookStack used.
     image: lscr.io/linuxserver/bookstack:latest
     container_name: bookstack
+    depends_on:
+      - mariadb
     environment:
       - PUID=1000
       - PGID=1000
@@ -13,11 +15,11 @@ services:
       # APP_URL must be set as the base URL you'd expect to access BookStack
       # on via the browser. The default shown here is what you might use if accessing
       # direct from the browser on the docker host, hence the use of the port as configured below.
-      - APP_URL=http://localhost:6875
+      # - APP_URL=http://localhost:6875
       # APP_KEY must be a unique key. Generate your own by running
       # docker run -it --rm --entrypoint /bin/bash lscr.io/linuxserver/bookstack:latest appkey
       # You should keep the "base64:" part for the option value.
-      - APP_KEY=base64:3qjlIoUX4Tw6fUQgZcxMbz6lb8+dAzqpvItqHvahW1c=
+      # - APP_KEY=base64:3qjlIoUX4Tw6fUQgZcxMbz6lb8+dAzqpvItqHvahW1c=
 
       # The below database details are purposefully aligned with those
       # configuted for the "mariadb" service below:

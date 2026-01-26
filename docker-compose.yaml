@@ -15,7 +15,7 @@ services:
       # APP_URL must be set as the base URL you'd expect to access BookStack
       # on via the browser. The default shown here is what you might use if accessing
       # direct from the browser on the docker host, hence the use of the port as configured below.
-      - APP_URL=http://localhost:6875
+      - APP_URL=http://192.168.178.1127:6875
       # APP_KEY must be a unique key. Generate your own by running
       # docker run -it --rm --entrypoint /bin/bash lscr.io/linuxserver/bookstack:latest appkey
       # You should keep the "base64:" part for the option value.

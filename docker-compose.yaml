@@ -19,7 +19,7 @@ services:
       # APP_KEY must be a unique key. Generate your own by running
       # docker run -it --rm --entrypoint /bin/bash lscr.io/linuxserver/bookstack:latest appkey
       # You should keep the "base64:" part for the option value.
-      # - APP_KEY=base64:3qjlIoUX4Tw6fUQgZcxMbz6lb8+dAzqpvItqHvahW1c=
+      - APP_KEY=93dH2vibnXtxsYirsIiojniMkshLt/s5tfZY79We/hU=
 
       # The below database details are purposefully aligned with those
       # configuted for the "mariadb" service below:

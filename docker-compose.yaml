@@ -1,5 +1,42 @@
 version: "3.9"
 services:
+  bookstack:
+    # You should update the version here to match the latest
+    # release of BookStack: https://github.com/BookStackApp/BookStack/releases
+    # You'll change this when wanting to update the version of BookStack used.
+    image: lscr.io/linuxserver/bookstack:version-v25.02
+    container_name: bookstack
+    environment:
+      - PUID=1000
+      - PGID=1000
+      - TZ=Europe/Amsterdam
+      # APP_URL must be set as the base URL you'd expect to access BookStack
+      # on via the browser. The default shown here is what you might use if accessing
+      # direct from the browser on the docker host, hence the use of the port as configured below.
+      - APP_URL=http://192.168.178.127:6875
+      # APP_KEY must be a unique key. Generate your own by running
+      # docker run -it --rm --entrypoint /bin/bash lscr.io/linuxserver/bookstack:latest appkey
+      # You should keep the "base64:" part for the option value.
+      - APP_KEY=base64:3qjlIoUX4Tw6fUQgZcxMbz6lb8+dAzqpvItqHvahW1c=
+
+      # The below database details are purposefully aligned with those
+      # configuted for the "mariadb" service below:
+      - DB_HOST=http://192.168.178.238
+      - DB_PORT=3306
+      - DB_DATABASE=bookstack
+      - DB_USERNAME=bookstack
+      - DB_PASSWORD=bookstack
+    volumes:
+      # You generally only ever need to map this one volume.
+      # This maps it to a "bookstack_app_data" folder in the same
+      # directory as this compose config file.
+      - ./bookstack_data:/config
+    ports:
+      # This exposes port 6875 for general web access.
+      # Commonly you'd have a reverse proxy in front of this,
+      # redirecting incoming requests to this port.
+      - 6875:80
+    restart: unless-stopped
   cup:
     image: ghcr.io/sergi0g/cup:latest
     container_name: cup # Optional

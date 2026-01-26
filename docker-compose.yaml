@@ -20,7 +20,7 @@ services:
       # docker run -it --rm --entrypoint /bin/bash lscr.io/linuxserver/bookstack:latest appkey
       # You should keep the "base64:" part for the option value.
       - APP_KEY=base64:FQ3LWpMzcmqBrALEL8D38m9ucRfnZ9uQp/2p/zqqEvk=
-
+      - TRUSTED_PROXIES=*
       # The below database details are purposefully aligned with those
       # configuted for the "mariadb" service below:
       - DB_HOST=mariadb
@@ -28,6 +28,7 @@ services:
       - DB_DATABASE=bookstack
       - DB_USERNAME=bookstack
       - DB_PASSWORD=bookstack
+      
     volumes:
       # You generally only ever need to map this one volume.
       # This maps it to a "bookstack_app_data" folder in the same

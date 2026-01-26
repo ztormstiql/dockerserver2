@@ -224,7 +224,7 @@ services:
       # You generally only ever need to map this one volume.
       # This maps it to a "bookstack_db_data" folder in the same
       # directory as this compose config file.
-      - ./bookstack_data:/config
+      - ./mariadb_data:/config
 
     # These ports are commented out as you don't really need this port
     # exposed for normal use, mainly only if connecting direct the the

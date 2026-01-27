@@ -16,7 +16,7 @@
         - href: http://192.168.178.101:8091
           icon: z-wave-js-ui.png
     - ESPhome:
-        - href: http://192.168.178.127:6052
+        - href: https://eshome.hasz.app
           icon: esphome.png
 
           
@@ -44,14 +44,17 @@
         - href: http://192.168.178.238:32400
           icon: plex.png
     - Jellyfin:
-        - href: http://192.168.178.238:8096
+        - href: https://jellyfin.hasz.app
           icon: jellyfin.png
     - Sonarr:
-        - href: http://192.168.178.238:8989
+        - href: https://sonarr.app
           icon: sonarr.png
     - Radarr:
         - href: http://192.168.178.238:7878
-          icon: radarr.png      
+          icon: radarr.png   
+    - Jellyseerr:
+        - href: https://jellyseerr.hasz.app
+          icon: jellyseerr.png
     - Prowlarr:
         - href: http://192.168.178.238:9696
           icon: prowlarr.png
@@ -65,8 +68,14 @@
         - href: http://192.168.178.238:3579
           icon: ombi.png
     - Zerobyte:
-        - href: http://192.168.178.127:4096
+        - href: https://zerobyte.hasz.app
           icon: zerobyte.png
+    - Forgejo:
+        - href: https://forgejo.hasz.app
+          icon: forgejo.png
+    - Bookstack:
+        - href: https://bookstack.hasz.app
+          icon: bookstack.png
     - Linkding:
         - href: https://links.hasz.app
           icon: linkding.png

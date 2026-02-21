@@ -242,7 +242,7 @@ services:
     environment:
       - TZ=Europe/Amsterdam  # Set your timezone here
       - APP_SECRET=c61fd19a4393e5ef399d3e27f30b8815cd2d967b3ffd5d174e587b4a7c46f8a1
-      - BASE_URL=http://192.168.178.127:4096
+      - BASE_URL=https://zerobyte.hasz.app
     volumes:
       - /etc/localtime:/etc/localtime:ro
       - /var/lib/zerobyte:/var/lib/zerobyte

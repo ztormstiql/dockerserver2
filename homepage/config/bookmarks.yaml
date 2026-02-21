@@ -70,6 +70,9 @@
     - Zerobyte:
         - href: https://zerobyte.hasz.app
           icon: zerobyte.png
+    - ProxmoxBackupServer:
+        - href: https://pbs.hasz.app
+          icon: proxmox.png
     - Forgejo:
         - href: https://forgejo.hasz.app
           icon: forgejo.png

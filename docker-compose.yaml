@@ -241,7 +241,7 @@ services:
       - 4096:4096
     environment:
       - TZ=Europe/Amsterdam  # Set your timezone here
-      - APP_SECRET=VUL_HIER_EEN_32_BYTE_HEX_IN
+      - APP_SECRET=c61fd19a4393e5ef399d3e27f30b8815cd2d967b3ffd5d174e587b4a7c46f8a1
       - BASE_URL=http://192.168.178.127:4096
     volumes:
       - /etc/localtime:/etc/localtime:ro

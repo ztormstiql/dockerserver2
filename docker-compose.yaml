@@ -127,7 +127,7 @@ services:
       - TZ=Europe/Amsterdam
       - HOMEPAGE_ALLOWED_HOSTS=192.168.178.127:1201,localhost,127.0.0.1,192.168.178.168,hasz.app
     restart: always
-jellyseerr:
+  jellyseerr:
     image: ghcr.io/seerr-team/seerr:latest
     init: true
     container_name: jellyseerr
